@@ -3,7 +3,6 @@ import { Book } from "../model/book_model.js";
 
 const router = express.Router();
 
-
 //create a book
 router.post("/", async (req, res) => { // /book/
     try {
