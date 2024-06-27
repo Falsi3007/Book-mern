@@ -69,7 +69,7 @@ router.put("/:id", async (req,res) => {
 
         if (!result) {
             return res.status(400).send({
-                message: "Book not fount"
+                message: "Book not found"
             })
         }
         return res.status(200).send({message:"Book updated succssfully"});
@@ -87,7 +87,7 @@ router.delete("/:id", async (req,res) => {
         const book = await Book.findByIdAndDelete(id)
         if (!book) {
             return res.status(400).send({
-                message: "Book not fount"
+                message: "Book not found"
             })
         }
         return res.status(200).send({message:"Book delete succssfully"});
